@@ -28,8 +28,8 @@ public class Prueba {
         
         Persona alvaro = new Persona("Álvaro", 20);
         
-        alvaro.beberCafe(caf1, 23);
-        System.out.println("\nDespues de servirse una taza");
+        alvaro.beberCafe(caf1, 50);
+        System.out.println("\nDespues de servirse una taza con 50 ml");
         System.out.println("Cantidad actual de la cafetera: " + caf1.getCantidadActual());        
         //miau
         
