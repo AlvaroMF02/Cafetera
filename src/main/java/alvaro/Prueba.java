@@ -31,7 +31,7 @@ public class Prueba {
         alvaro.beberCafe(caf1, 23);
         System.out.println("\nDespues de servirse una taza");
         System.out.println("Cantidad actual de la cafetera: " + caf1.getCantidadActual());        
-        
+        //miau
         
     }
 }
