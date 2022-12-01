@@ -5,7 +5,7 @@ package alvaro;
  * @author alvaro
  */
 public class Persona {
-    
+
     private String nombre;
     private int edad;
 
@@ -38,17 +38,15 @@ public class Persona {
     public String toString() {
         return "## Persona ##" + "\nNombre: " + nombre + "\nEdad: " + edad;
     }
-    
+
     //HACER CAFE
-    public void hacerCafe(Cafetera c){
+    public void hacerCafe(Cafetera c) {
         c.setCantidadActual(c.getCapacidadMaxima());
     }
-    
+
     //BEBER CAFE
-    public void beberCafe(Cafetera c, int cantidad){
+    public void beberCafe(Cafetera c, int cantidad) {
         c.servirTaza(cantidad);
     }
-    
-    
-    
+
 }

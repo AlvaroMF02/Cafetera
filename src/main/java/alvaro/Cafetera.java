@@ -22,13 +22,13 @@ public class Cafetera {
 
     public Cafetera(double capacidadMaxima, double cantidadActual) {
         this.capacidadMaxima = capacidadMaxima;
-        
+
         if (cantidadActual > capacidadMaxima) {
             this.cantidadActual = capacidadMaxima;
-        }else{
+        } else {
             this.cantidadActual = cantidadActual;
         }
-        
+
     }
 
     public double getCapacidadMaxima() {
@@ -46,50 +46,46 @@ public class Cafetera {
     public void setCantidadActual(double cantidadActual) {
         this.cantidadActual = cantidadActual;
     }
-    
-    
-    
+
     //LLENAR LA CAFETERA
-    public void llenarCafetera(){
+    public void llenarCafetera() {
         this.cantidadActual = this.capacidadMaxima;
     }
-    
+
     //SERVIR TAZA
-    public double servirTaza (double cantidadAServir){
-        double cantidadTaza = 0.0;
-        
-        if (cantidadAServir < this.cantidadActual) {
-            
+    public double servirTaza(double cantidadAServir) {
+        double cantidadTaza;
+
+        if (cantidadAServir > this.cantidadActual) {
+
             cantidadTaza = this.cantidadActual;
             this.cantidadActual -= cantidadTaza;
-            
-        }else{
-            
+
+        } else {
+
             cantidadTaza = cantidadAServir;
             this.cantidadActual -= cantidadTaza;
         }
-        
+
         return cantidadTaza;
     }
-    
+
     //VACIAR LA CAFETERA
-    public void vaciarCafetera(){
+    public void vaciarCafetera() {
         this.cantidadActual = 0.0;
-    } 
-    
-    
+    }
+
     //METER MAS CAFE
-    public void agregarCafe(double cantidadAgregar){
-        
+    public void agregarCafe(double cantidadAgregar) {
+
         if ((cantidadAgregar + this.cantidadActual) > this.capacidadMaxima) {
-            
+
             this.cantidadActual = this.capacidadMaxima;
-            
-        }else{
-            
+
+        } else {
+
             this.cantidadActual = cantidadAgregar;
         }
     }
-    
-    
+
 }
